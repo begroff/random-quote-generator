@@ -1,0 +1,24 @@
+{
+  "name": "random-quote-generator",
+  "authors": [
+    "groffTECH <brett@grofftech.net>"
+  ],
+  "description": "Intermediate Front End Development project for Free Code Camp",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "4.*",
+    "bootstrap": "3.*",
+    "jquery": "2.2.*"
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Quote Generator</title>
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Trocchi'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page-wrapper">
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 page-info">
+          <h1 class="">Random Quote Generator</h1>
+          <p class="sub-heading">Enjoy my favorite quotes from around the Internet, random style!</p>
+          <div class="quote-button-area">
+            <input type="button" class="btn btn-default generate-quote-button" value="Generate Quote" />
+            <a href="" class="btn btn-default tweet-quote-button">Tweet Quote</a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="container quote-container">
+      <div class="row">
+        <div class="col-xs-3 col-md-offset-1 col-lg-2 beg-quotation">
+          <img class="img-responsive" src="http://www.grofftech.net/free_code_camp/images/left_quote.png" alt="large beginning quote graphic" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 quote-area">
+          <p class="quote-text"></p>
+          <p class="quote-author"></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3 col-xs-offset-8 col-lg-2 end-quotation">
+          <img class="img-responsive" src="http://grofftech.net/free_code_camp/images/right_quote.png" alt="large end quote graphic" />
+        </div>
+      </div>
+  </div>
+  <!-- <footer class="border">
+  <p>Made with love by Brett Groff of groffTECH<br />
+    Part of a <a href="http://www.freecodecamp.com" target="_blank">freeCodeCamp</a> Zipline Challenge. Check out my <a href="http://www.freecodecamp.com/grofftech" target="_blank">progress</a> so far in my coding journey.</p>
+</footer> -->
+<!-- Twitter Script -->
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
