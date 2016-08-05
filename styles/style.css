@@ -25,6 +25,9 @@ h1 {
 p {
   line-height: 1.5;
   font-family: 'Open Sans', sans-serif;
+  color: #0000000;
+  font-size: 1.2em;
+  font-style: italic;
 }
 
 a {
@@ -47,6 +50,8 @@ a {
   background-image: url("https://pixabay.com/static/uploads/photo/2014/12/15/16/46/blackboard-569260_960_720.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  border: 1px dashed red;
+  border-radius: 10px;
 }
 
 .quote-area {
@@ -64,9 +69,6 @@ a {
 }
 
 p.quote-text {
-  font-size: 1.2em;
-  font-style: italic;
-  color: #fff;
   padding: 0 5px 0 5px;
 }
 
@@ -74,8 +76,6 @@ p.quote-author {
   font-size: 1em;
   padding-top: 10px;
   text-align: right;
-  font-style: italic;
-  color: #fff;
 }
 
 
