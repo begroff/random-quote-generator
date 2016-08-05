@@ -6,7 +6,3 @@ User Stories To Fulfill:
 - I can press a button to tweet out a quote
 
 CodePen Link - http://codepen.io/groffTECH/pen/JGNNdw
-
-3rd Party Libraries Used:
-Bootstrap 3.3.6
-JQuery 2.1.3
