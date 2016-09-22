@@ -1,4 +1,4 @@
-(function() { //Immediately Invoked Function Expression
+(function loadQuotes() { //Immediately Invoked Function Expression
 
 // Quote data
   var quotes = [
