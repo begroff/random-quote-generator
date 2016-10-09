@@ -3,43 +3,44 @@
 <head>
     <title>Random Quote Generator</title>
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Trocchi'>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-<div class="page-wrapper">
   <div class="container">
-    <div class="row">
-        <div class="col-xs-12 page-info">
-          <h1 class="">Random Quote Generator</h1>
-          <p class="sub-heading">Enjoy my favorite quotes from around the Internet, random style!</p>
-          <div class="quote-button-area">
-            <input type="button" class="btn btn-default generate-quote-button" value="Generate Quote" />
-            <a href="" class="btn btn-default tweet-quote-button">Tweet Quote</a>
-          </div>
-        </div>
+    <h2>Random Quote Generator</h2>
+
+    <div class="quote-container">
+      <blockquote>
+        <p class="quoteText">Now is the time for all good men to come to the aid of their country</p>
+        <cite>&mdash; <span class="quoteAuthor">Test</span></cite>
+      </blockquote>
+
+      <div class="load-quote">
+        <i class="fa fa-spinner fa-spin"></i>
       </div>
+
+      <div class="twitter">
+        <a href="https://twitter.com/intent/tweet" class="btn-tweet">Tweet<i class="fa fa-twitter"></i></a>
+      </div>
+
+      <a href="#" class="btn-generate-quote">Generate New Quote</a>
+
+    </div>
   </div>
 
-  <div class="container quote-container">
-      <div class="row">
-        <div class="beg-quotation">
-          <img class="img-responsive" src="images/left_quote.png" alt="large beginning quote graphic" />
-        </div>
-        <div class="quote-area">
-          <p class="quote-text"></p>
-          <p class="quote-author"></p>
-        </div>
-        <div class="end-quotation">
-          <img class="img-responsive" src="images/right_quote.png" alt="large end quote graphic" />
-        </div>
-      </div>
-  </div>
-  <!-- <footer class="border">
-  <p>Made with love by Brett Groff of groffTECH<br />
-    Part of a <a href="http://www.freecodecamp.com" target="_blank">freeCodeCamp</a> Zipline Challenge. Check out my <a href="http://www.freecodecamp.com/grofftech" target="_blank">progress</a> so far in my coding journey.</p>
-</footer> -->
+  <footer>
+    Quotes powered by&nbsp;<a href="http://forismatic.com/en/">Forismatic</a>
+    <br />
+    Designed and coded by Brett Groff
+    <div class="social-media">
+      <i class="fa fa-github"></i>
+      <i class="fa fa-twitter-square"></i>
+      <i class="fa fa-facebook-square"></i>
+    </div>
+  </footer>
+
 <!-- Twitter Script -->
 <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
@@ -58,7 +59,6 @@
   return t;
 }(document, "script", "twitter-wjs"));</script>
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/app.js"></script>
-</body>
+  </body>
 </html>

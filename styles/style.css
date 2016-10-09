@@ -1,13 +1,9 @@
-/* Styles for layout and design */
 
-.border {
-    border: dashed 1px red;
-}
 
 /* --- General Page Styles --- */
 
 html {
-  font-size: 100%;
+  font-size: 16px;
 }
 
 html, body {
@@ -16,11 +12,7 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Trocchi, Helvetica, sans-serif;
-}
 
-h1 {
-  font-size: 1.9em;
-}
 
 p {
   line-height: 1.5;
@@ -30,42 +22,10 @@ p {
   font-style: italic;
 }
 
-a {
-
-}
-
-.page-wrapper {
-  position: relative;
-  min-height: 100%;
-  padding-bottom: 100px;
-}
-
-
-
-/* --- Quote Area Styles --- */
-
 .quote-container {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-image: url("https://pixabay.com/static/uploads/photo/2014/12/15/16/46/blackboard-569260_960_720.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 1px dashed red;
   border-radius: 10px;
-}
-
-.quote-area {
-  min-height: 100%;
-  width: 73%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 55px;
-  padding: 10px;
-}
-
-.end-quotation {
-  position: relative;
-  left: 30px;
 }
 
 p.quote-text {
@@ -76,108 +36,4 @@ p.quote-author {
   font-size: 1em;
   padding-top: 10px;
   text-align: right;
-}
-
-
-/* --- Button Styles --- */
-
-.quote-button-area {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.generate-quote-button, .tweet-quote-button {
-  font-size: 1.1em;
-  padding: 15px;
-  display: inline-block;
-  background-color: #808080;
-  color: #fff;
-}
-
-.btn:hover, .btn:focus {
-  background-color: #2D2D2D;
-  color: #fff;
-  outline-color: #2D2D2D;
-  outline-width: 2px;
-}
-
-.btn:active {
-  background-color: #808080 !important;
-  color: #fff !important;
-  outline-color: #2D2D2D !important;
-}
-
-.tweet-quote-button {
-  margin-left: 15px;
-}
-
-/* --- Footer Styles --- */
-
-footer {
-  position: absolute;
-  bottom: 0;
-}
-
-footer p {
-    padding: 30px 0 0 20px;
-}
-
-/* --- Xtra Small Devices Landscape View --- */
-
-@media (max-width: 768px) and (orientation: landscape) {
-  .quote-area {
-    width: 67%;
-    margin-left: 100px;
-  }
-}
-
-/* --- Small Devices --- */
-
-@media (min-width: 768px) {
-  h1 {
-    font-size: 3em;
-  }
-
-  .end-quotation {
-    position: relative;
-    left: 63px;
-  }
-
-  .quote-area {
-    width: 71%;
-    margin-left: 100px;
-  }
-
-  p.quote-text {
-    font-size: 1.5em;
-  }
-
-  p.quote-author {
-    font-size: 1.5em;
-  }
-}
-
-/* --- Medium Devices & Small Landscape --- */
-
-@media (min-width: 992px) {
-  .beg-quotation {
-  }
-
-  .quote-area {
-    margin-left: 170px;
-    width: 58%;
-  }
-
-  .end-quotation {
-    position: relative;
-    left: 20px;
-  }
-}
-
-/* --- Large Devices --- */
-
-@media (min-width: 1200px) {
-  .quote-area {
-    width: 60%;
-  }
 }
