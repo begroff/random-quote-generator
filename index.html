@@ -8,27 +8,23 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <div class="container">
+  <header class="app-title">
     <h2>Random Quote Generator</h2>
-
-    <div class="quote-container">
+  </header>
+  <div class="container">
+    <div class="quoteContainer">
       <blockquote>
-        <p class="quoteText">Now is the time for all good men to come to the aid of their country</p>
-        <cite>&mdash; <span class="quoteAuthor">Test</span></cite>
-      </blockquote>
-
-      <div class="load-quote">
-        <i class="fa fa-spinner fa-spin"></i>
-      </div>
-
-      <div class="twitter">
+        <p class="quoteText"></p>
+        <cite>&mdash;<span class="quoteAuthor"></span></cite>
         <a href="https://twitter.com/intent/tweet" class="btn-tweet">Tweet<i class="fa fa-twitter"></i></a>
-      </div>
-
-      <a href="#" class="btn-generate-quote">Generate New Quote</a>
-
+      </blockquote>
+    </div>
+    <div class="loadingQuote">
+      <i class="fa fa-spinner fa-spin"></i>
     </div>
   </div>
+
+  <a href="#" class="btn-generate-quote">Generate New Quote</a>
 
   <footer>
     Quotes powered by&nbsp;<a href="http://forismatic.com/en/">Forismatic</a>
