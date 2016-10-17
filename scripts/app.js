@@ -1,4 +1,4 @@
-(function loadQuote() { //Immediately Invoked Function Expression
+(function loadQuote() {
   $('blockquote').hide();
   $('.loadingQuote').show();
 
@@ -11,18 +11,15 @@
         if (data.quoteAuthor == "") {
           data.quoteAuthor = "Unknown";
         }
-        // Check and see if quote plus author is less than 109 characters,
-        var quoteAndAuthor = data.quoteText + data.quoteAuthor;
 
+        var quoteAndAuthor = data.quoteText + data.quoteAuthor;
+        // Check and see if the quote we get is tweetable
         if (quoteAndAuthor.length < 109) {
-          // Hide the loading icon
           $('.loadingQuote').hide();
-          // Show the blockquote
           $('blockquote').show();
-          // Display the quote
           $(".quoteText").html(data.quoteText);
-          // Display the author
           $('.quoteAuthor').html(data.quoteAuthor);
+          $('.btn-tweet').show();
         }
         else {
           getQuote();
@@ -33,9 +30,9 @@
       error: function requestError (xhr, status, error) {
         $('.loadingQuote').hide();
         $('blockquote').show();
-        $('cite').hide();
         $('.btn-tweet').hide();
-        $('.quoteText').html("There was an error with loading the quote. Please try again.");
+        $('.quoteText').html("There was an error with loading the quote");
+        $('.quoteAuthor').html("Please try again");
         console.log("xhr: " + xhr + "\nstatus: " + status + "\nerror: " + error);
       }
     });
