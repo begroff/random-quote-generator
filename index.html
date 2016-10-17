@@ -15,16 +15,22 @@
     <div class="quoteContainer">
       <blockquote>
         <p class="quoteText"></p>
-        <cite>&mdash;<span class="quoteAuthor"></span></cite>
-        <a href="https://twitter.com/intent/tweet" class="btn-tweet">Tweet<i class="fa fa-twitter"></i></a>
+        <div class="author">
+          <cite>&mdash;<span class="quoteAuthor"></span></cite>
+        </div>
+        <div class="tweet">
+          <a href="https://twitter.com/intent/tweet" class="btn-tweet"><i class="fa fa-twitter"></i>Tweet</a>
+        </div>
       </blockquote>
     </div>
     <div class="loadingQuote">
       <i class="fa fa-spinner fa-spin"></i>
     </div>
   </div>
-
-  <a href="#" class="btn-generate-quote">Generate New Quote</a>
+  <div class="button">
+    <a href="#" class="btn-generate-quote">Generate New Quote</a>
+  </div>
+  <div id="twitter-js-test"></div>
 
   <footer>
     Quotes powered by&nbsp;<a href="http://forismatic.com/en/">Forismatic</a>
