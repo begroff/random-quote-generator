@@ -19,6 +19,7 @@
   "dependencies": {
     "normalize-css": "4.*",
     "jquery": "2.2.*",
-    "font-awesome": "fontawesome#^4.6.*"
+    "font-awesome": "fontawesome#^4.6.*",
+    "modernizer": "^2.8.2"
   }
 }
