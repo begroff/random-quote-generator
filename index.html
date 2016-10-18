@@ -6,6 +6,7 @@
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Trocchi'>
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 </head>
 <body>
   <header class="app-title">
@@ -28,17 +29,15 @@
     </div>
   </div>
   <div class="button">
-    <a href="#" class="btn-generate-quote">Generate New Quote</a>
+    <button class="btn-generate-quote">Generate New Quote</button>
   </div>
-  <div id="twitter-js-test"></div>
-
   <footer>
     <p>Quotes powered by&nbsp;<a href="http://forismatic.com/en/">Forismatic</a>
-    <br />Designed and coded by Brett Groff</p>
+    <br />Designed and coded by <a href="http://www.brettgroff.com">Brett Groff</a></p>
     <div class="social-media">
-      <i class="fa fa-github"></i>
-      <i class="fa fa-twitter-square"></i>
-      <i class="fa fa-facebook-square"></i>
+      <a href="https://github.com/begroff"><span class="fa fa-github"></span></a>
+      <a href="https://twitter.com/begroff"><span class="fa fa-twitter-square"></span></a>
+      <a href="https://www.facebook.com/brettgroff"><span class="fa fa-facebook-square"></span></a>
     </div>
   </footer>
 
@@ -60,6 +59,7 @@
   return t;
 }(document, "script", "twitter-wjs"));</script>
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/modernizer/modernizr.js"></script>
 <script type="text/javascript" src="scripts/app.js"></script>
   </body>
 </html>
