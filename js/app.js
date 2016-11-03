@@ -36,7 +36,7 @@
         console.log("xhr: " + xhr + "\nstatus: " + status + "\nerror: " + error);
       }
     });
-  };
+  }
 
   // Generating a new quote on button click
   $('.btn-generate-quote').on("click", function generateQuote() {
@@ -48,7 +48,7 @@
   function updateTweetButtonAttributes(quote, author) {
       var tweetButton = $('.btn-tweet');
       var tweetIntentUrl = "https://twitter.com/intent/tweet?";
-      var quote = "text=" + quote + "—" + author;
+      quote = "text=" + quote + "—" + author;
       var via = "&via=begroff";
       var hashtags = "&hashtags=quoteoftheday";
 
