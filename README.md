@@ -11,10 +11,5 @@ Build an app that is functionally similar to this: https://codepen.io/FreeCodeCa
 - I can click a button to show me a new random quote
 - I can press a button to tweet out a quote
 
-##### To Do:
-- [ ] Add color scheme
-- [ ] Re-design containers
-- [ ] Fix main image not loading
-
-##### Future:
-- [ ] Find decent Quote API and add in code to use it
+##### CodePen Version Link
+http://codepen.io/begroff/pen/JGNNdw
