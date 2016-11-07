@@ -20,12 +20,12 @@
           $(".quoteText").html(data.quoteText);
           $('.quoteAuthor').html(data.quoteAuthor);
           $('.btn-tweet').show();
+
+          updateTweetButtonAttributes(data.quoteText, data.quoteAuthor);
         }
         else {
           getQuote();
         }
-
-        updateTweetButtonAttributes(data.quoteText, data.quoteAuthor);
       },
       error: function requestError (xhr, status, error) {
         $('.loadingQuote').hide();
