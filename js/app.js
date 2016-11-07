@@ -48,7 +48,7 @@
   function updateTweetButtonAttributes(quote, author) {
       var tweetButton = $('.btn-tweet');
       var tweetIntentUrl = "https://twitter.com/intent/tweet?";
-      var quoteText = encodeUri("text=" + quote + "—" + author + "&via=begroff" + "&hashtags=quoteoftheday");
+      var quoteText = encodeURI("text=" + quote + "—" + author + "&via=begroff" + "&hashtags=quoteoftheday");
 
       tweetButton.attr('href', tweetIntentUrl + quoteText);
     }
