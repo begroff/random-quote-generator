@@ -125,7 +125,7 @@ button:focus {
 footer {
   background-color: #4C245B;
   width: 100%;
-  max-height: 200px;
+  height: 200px;
   text-align: center;
   color: #ebebeb;
   line-height: 1.5;
