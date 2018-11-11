@@ -1,0 +1,17 @@
+blockquote {
+  quotes: '\201C' '\201D';
+  border-left: 10px solid $blockquote__border-color;
+  padding-left: 0.28em;
+}
+
+blockquote p {
+  display: block;
+  margin: -35px 0px 0 30px;
+  width: 100%;
+}
+
+blockquote:before {
+  content: open-quote;
+  font-size: 4em;
+  color: $blockquote__border-color;
+}

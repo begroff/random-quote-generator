@@ -1,20 +1,25 @@
 {
   "name": "random-quote-generator",
   "version": "1.0.0",
-  "description": "Random Quote Generator project from freeCodeCamp",
+  "description": "A random quote generator using quotes from the Forismatic API",
   "main": "index.html",
-  "dependencies": {},
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "5.5.0",
+    "fs-extra": "7.0.1",
+    "jquery": "3.3.1"
+  },
   "devDependencies": {
-    "browser-sync": "^2.17.3",
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-if": "^2.0.1",
-    "gulp-load-plugins": "^1.3.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-uglify": "^2.0.0",
-    "gulp-useref": "^3.1.2",
-    "run-sequence": "^1.2.2"
+    "browser-sync": "2.26.3",
+    "del": "3.0.0",
+    "gulp": "3.9.1",
+    "gulp-concat": "2.6.1",
+    "gulp-if": "2.0.2",
+    "gulp-load-plugins": "1.5.0",
+    "gulp-rename": "1.4.0",
+    "gulp-sass": "4.0.2",
+    "gulp-sourcemaps": "2.6.4",
+    "gulp-uglify": "3.0.1",
+    "normalize.css": "8.0.0",
+    "run-sequence": "2.2.1"
   }
 }

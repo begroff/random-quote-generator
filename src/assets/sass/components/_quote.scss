@@ -1,0 +1,59 @@
+.quote {
+    margin-top: 150px;
+    min-height: 35%;
+
+    @media screen and (min-width: 720px) {
+        min-height: 25%;
+    }
+}
+
+.quote__author {
+  display: block;
+  margin: 10px 0 0 30px
+}
+
+.quote__tweet {
+  margin: 25px 0 0 35px;
+}
+
+.quote__tweet-button {
+  background-color: $tweet-button__background-color;
+  border-radius: 3px;
+  color: $tweet-button__color;
+  cursor: pointer;
+  font-family: $font-family__tweet-button;
+  font-size: .7em;
+  font-weight: 500;
+  height: 20px;
+  padding: 6px 8px 6px 8px;
+  text-decoration: none;
+
+  &:hover {
+      background-color: $tweet-button__background-color--hover;
+  }
+}
+
+.new-quote {
+  margin: 50px auto;
+  padding: 20px 8px;
+  text-align: center;
+}
+
+.new-quote__button {
+    background-color: $new-quote-button__background-color;
+    border-radius: 8px;
+    border: 3px solid $new-quote-button__border-color;
+    color: $new-quote-button__color;
+    padding: 20px 8px;
+
+    &:hover {
+        background-color: $new-quote-button__background-color--hover;
+        color: $new-quote-button__color--hover;
+    }
+
+    &:active {
+        background-color: $new-quote-button__background-color--active;
+        border: 3px solid $new-quote-button__border-color--active;
+        color: $new-quote-button__color--active;
+    }
+}

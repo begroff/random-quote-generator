@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Random Quote Generator</title>
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/fontawesome.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Trocchi'>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  </head>
+  <body>
+    <header class="app-title">
+      <h2>Random Quote Generator</h2>
+    </header>
+    <div class="main">
+      <div class="quote">
+        <div>
+          <blockquote>
+            <p class="quote__text"></p>
+            <div class="quote__author">
+              <cite>&mdash;<span class="quote__author-text"></span></cite>
+            </div>
+            <div class="quote__tweet">
+              <a href="https://twitter.com/intent/tweet" class="quote__tweet-button">
+                <i class="fab fa-twitter"></i>Tweet
+              </a>
+            </div>
+          </blockquote>
+        </div>
+        <div class="loading">
+          <i class="fas fa-spinner fa-spin"></i>
+        </div>
+      </div>
+      <div class="new-quote">
+        <button class="new-quote__button">Generate New Quote</button>
+      </div>
+    </div>
+    <footer>
+      <p>Quotes powered by&nbsp;<a href="http://forismatic.com/en/">Forismatic</a>
+      <br />Designed and coded by <a href="http://www.brettgroff.com">Brett Groff</a></p>
+      <div class="social-media">
+        <a href="https://github.com/begroff"><span class="fab fa-github"></span></a>
+        <a href="https://twitter.com/begroff"><span class="fab fa-twitter-square"></span></a>
+        <a href="https://www.facebook.com/brettgroff"><span class="fab fa-facebook-square"></span></a>
+      </div>
+    </footer>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/app.min.js"></script>
+    </body>
+</html>

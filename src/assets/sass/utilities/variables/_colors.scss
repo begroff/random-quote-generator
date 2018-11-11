@@ -1,0 +1,45 @@
+//
+// Colors
+//=====================================================
+$white: #FFF;
+$wisteria: #9357A9;
+$tundora: #493f3f;
+$gallery: #ebebeb;
+$amehyst: #bf37c5;
+$bossanova: #4C245B;
+$curious-blue: #1b95e0;
+$denim: #0c7abf;
+$biloba-flower: #D396E9;
+
+// Elements
+$blockquote__border-color: $wisteria;
+
+$body__background-color: $gallery;
+$body__color: $tundora;
+
+$heading__color: $gallery;
+
+$link__color: $amehyst;
+
+// Header Component
+$header__color: $wisteria;
+
+// Footer Component
+$footer__background-color: $bossanova;
+$footer__color: $gallery;
+
+// Quote Component
+$tweet-button__background-color: $curious-blue;
+$tweet-button__background-color--hover: $denim;;
+$tweet-button__color: $white;
+
+$new-quote-button__background-color: $gallery;
+$new-quote-button__background-color--active: $gallery;
+$new-quote-button__background-color--hover: $wisteria;
+
+$new-quote-button__border-color: $wisteria;
+$new-quote-button__border-color--active: $wisteria;
+
+$new-quote-button__color: $tundora;
+$new-quote-button__color--hover: $white;
+$new-quote-button__color--active: $tundora;

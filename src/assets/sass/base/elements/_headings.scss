@@ -1,0 +1,12 @@
+//
+// Headings
+//=====================================================
+
+h2 {
+  color: $heading__color;
+  font-size: 1.4em;
+
+  @media screen and (min-width: 720px) {
+      font-size: 2em;
+    }
+}

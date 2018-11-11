@@ -1,0 +1,14 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: $font-family__base;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  color: $body__color;
+  font-size: 16px;
+  background-color: $body__background-color;
+}

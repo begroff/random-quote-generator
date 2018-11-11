@@ -1,0 +1,11 @@
+.app-title {
+  background-color: $header__color;
+  width: 100%;
+  text-align: center;
+  flex: 0 1 auto;
+  min-height: 15%;
+}
+
+.app-title h2 {
+    margin: 50px 0 0 0;
+}
