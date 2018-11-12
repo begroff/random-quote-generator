@@ -47,18 +47,18 @@ var watchDirs = {
 }
 
 /**
- * Copies html files.
+ * Copies html files and refreshes the browser.
  */
-gulp.task('html', function() {
+gulp.task('html', function copyHtmlFiles() {
   return gulp.src(sourceFiles.html)
   .pipe(gulp.dest(distDirs.dist))
-  .pipe(browserSync.reload({ stream: true}));
+  .pipe(browserSync.reload( { stream: true } ));
 });
 
 /**
- * Compiles Sass.
+ * Compiles Sass and refreshes the browser.
  */
-gulp.task('sass', function() {
+gulp.task('sass', function compileSass() {
   return gulp.src(sourceFiles.css.sass)
     .pipe(sourcemaps.init())
     .pipe(sass( { outFile: distFiles.css }))
@@ -68,27 +68,29 @@ gulp.task('sass', function() {
 });
 
 /**
- * Copies css dependencies and then compiles sass.
+ * Compiles sass and then copies css files/directories required by app.
  */
-gulp.task('css', ['sass'], function() {
+gulp.task('styles', gulp.series('sass', function copyCssDependencies(done) {
   fs.copy(sourceFiles.css.fonts, distDirs.dist + "/webfonts");
   fs.copyFileSync(sourceFiles.css.fontAwesome, distDirs.css + "/fontawesome.min.css");
   fs.copyFileSync(sourceFiles.css.normalize, distDirs.css + "/normalize.css");
-})
+
+  done();
+}));
 
 /**
  * Concatenates javascript files.
  */
-gulp.task('js:concat', function() {
+gulp.task('js:concat', function combineJsFiles() {
   return gulp.src(sourceFiles.js.app)
   .pipe(concat(distFiles.js))
   .pipe(gulp.dest(distDirs.js));
 });
 
 /**
- * Minify javascript files after they have been concatenated.
+ * Minifies javascript files after they have been combined and refreshes the browser.
  */
-gulp.task('js:compress', ['js:concat'], function() {
+gulp.task('js:compress', function minifyJs() {
   return gulp.src(distDirs.js + "/" + distFiles.js)
   .pipe(uglify())
   .pipe(rename( { suffix: ".min" }))
@@ -97,43 +99,34 @@ gulp.task('js:compress', ['js:concat'], function() {
 });
 
 /**
- * Copies script dependencies and starts js build process
+ * Concatenates javascript files, compresses them and then copies js files required by app.
  */
-gulp.task('js', ['js:compress'], function() {
-  fs.copyFileSync(sourceFiles.js.jquery, distDirs.js + "/jquery.min.js")
-});
+gulp.task('scripts', gulp.series(['js:concat', 'js:compress'], function copyJsDeps(done) {
+  fs.copyFileSync(sourceFiles.js.jquery, distDirs.js + "/jquery.min.js");
+  done();
+}));
 
-gulp.task('images', function() {
+/**
+ * Copies images to the distribution directory.
+ */
+gulp.task('images', function copyImages() {
   return gulp.src(sourceFiles.images)
   .pipe(gulp.dest(distDirs.images))
 });
 
 /**
- * Cleans the distribution directory
+ * Cleans the distribution directory.
  */
-gulp.task('clean', function () {
-  return del.sync([distDirs.distAll, "!" + distDirs.dist]);
-});
+gulp.task('clean', function cleanDestinationDirectory(done) {
+  del.sync([distDirs.distAll, "!" + distDirs.dist]);
 
-/**
- * Runs necessary tasks for build and then watches directories
- * for changes.
- */
-gulp.task('watch', ['build', 'browserSync'], function() {
-  gulp.watch(watchDirs.html, ['html']);
-  gulp.watch(watchDirs.css, ['css']);
-  gulp.watch(watchDirs.js, ['js']);
+  done();
 });
-
-/**
- * Runs tasks required for build.
- */
-gulp.task('build', ['clean', 'html', 'css', 'js']);
 
 /**
  * Runs browser sync for automatic refresh when files change.
  */
-gulp.task('browserSync', function() {
+gulp.task('browserSync', function () {
   browserSync.init({
     server: {
       baseDir: distDirs.dist
@@ -141,4 +134,23 @@ gulp.task('browserSync', function() {
   });
 });
 
-gulp.task('default', ['watch']);
+/**
+ * Runs tasks required for build.
+ */
+gulp.task('build', gulp.series('clean', gulp.parallel(['html', 'styles', 'scripts'])));
+
+/**
+ * Runs the build task as default task (just typing gulp on command line),
+ * starts browsersync and watches html, css and js files.
+ */
+gulp.task('default', gulp.series('build', gulp.parallel(['browserSync', watchFiles])));
+
+/**
+ * Watches html, css and js files and runs appropriate tasks when there
+ * are changes.
+ */
+function watchFiles() {
+  gulp.watch(watchDirs.html, gulp.series('html'));
+  gulp.watch(watchDirs.css, gulp.series('sass'));
+  gulp.watch(watchDirs.js, gulp.series(['js:concat', 'js:compress']));
+}
